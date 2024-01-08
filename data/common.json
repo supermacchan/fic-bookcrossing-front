@@ -1,4 +1,29 @@
 {
+  "logo": {
+    "link": "/",
+    "linkAria": "посилання на головну сторінку",
+    "svgAria": "логотип сайту"
+  },
+  "navigation": {
+    "links": [
+      {
+        "link": "/catalog",
+        "text": "Каталог"
+      },
+      {
+        "link": "/profile",
+        "text": "Мій профіль"
+      },
+      {
+        "link": "/my-books",
+        "text": "Мої книжки"
+      },
+      {
+        "link": "/favorites",
+        "text": "Обране"
+      }
+    ]
+  },
   "header": {},
   "footer": {
     "disclaimer": "Сайт зроблений для персонального використання",

@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Montserrat } from 'next/font/google';
 import './globals.css';
 
 import { Header, Footer } from '@/components';
 
-const inter = Inter({ subsets: ['latin'] });
+const montserrat = Montserrat({ subsets: ['cyrillic-ext'] });
 
 export const metadata: Metadata = {
   title: 'FiCTiON Буккросинг',
@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="uk">
       <body
-        className={`${inter.className} flex min-h-[100vh] flex-col bg-warmBg text-primary`}
+        className={`${montserrat.className} flex min-h-[100vh] flex-col bg-warmBg text-primary`}
       >
         <Header />
         {children}

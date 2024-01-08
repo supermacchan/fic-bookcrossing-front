@@ -9,7 +9,7 @@ const IconBtn: React.FC<IconBtnProps> = ({ item, className }) => {
 
   const btnStyles = classNames('flex justify-center items-center', className);
 
-  const iconStyles = classNames('fill-current');
+  const iconStyles = classNames('');
 
   return (
     <>

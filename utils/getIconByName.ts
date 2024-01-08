@@ -10,8 +10,8 @@ function getIconByName(icon: IconBtnNameType): any | null {
   switch (icon.toLowerCase()) {
     case 'linkedin':
       iconRef = linkedinIcon;
-
       break;
+
     case 'github':
       iconRef = githubIcon;
       break;
