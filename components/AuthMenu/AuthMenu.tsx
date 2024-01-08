@@ -25,7 +25,7 @@ const AuthMenu: React.FC<AuthMenuProps> = ({ placement, actionHandler }) => {
   };
 
   const authMenuStyles = classNames('flex gap-3', {
-    'smOnly:hidden': placement === 'header',
+    'smOnly:hidden xl:gap-6': placement === 'header',
     'mt-10 justify-center gap-5': placement === 'menu',
   });
 

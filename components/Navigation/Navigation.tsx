@@ -13,7 +13,7 @@ const Navigation: React.FC<NavigationProps> = ({
 }) => {
   const navStyles = classNames({
     'flex flex-col gap-2 md:gap-3 md:flex-row': placement === 'footer',
-    'smOnly:hidden md:flex md:flex-col md:gap-3 md:flex-row':
+    'smOnly:hidden md:flex md:gap-4 md:flex-row xl:gap-10':
       placement === 'header',
     'flex flex-col gap-4 pt-3': placement === 'menu',
   });
@@ -23,6 +23,7 @@ const Navigation: React.FC<NavigationProps> = ({
     'hover:text-accent focus:text-accent transition-all duration-300 ease-in',
     {
       'text-xl uppercase': placement === 'menu',
+      'xl:text-xl': placement === 'header',
     },
   );
 

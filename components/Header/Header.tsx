@@ -3,7 +3,7 @@ import { Logo, Navigation, MobileMenu, AuthMenu } from '@/components';
 const Header = () => {
   return (
     <header className="bg-white py-3">
-      <div className="container flex justify-between">
+      <div className="container flex items-center justify-between">
         <Logo />
 
         {/* only on mob */}
