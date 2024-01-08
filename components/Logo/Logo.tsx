@@ -4,6 +4,7 @@ import { logo } from '@/data/common.json';
 
 const Logo = () => {
   const { link, linkAria, svgAria } = logo;
+
   return (
     <Link
       href={link}

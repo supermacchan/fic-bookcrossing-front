@@ -22,11 +22,36 @@
         "link": "/favorites",
         "text": "Обране"
       }
+    ],
+    "home": {
+      "link": "/",
+      "text": "На головну"
+    }
+  },
+  "authNav": {
+    "authorized": [
+      {
+        "text": "Вийти",
+        "svgAria": "іконка виходу з акаунту",
+        "svg": "logout"
+      }
+    ],
+    "nonAuthorized": [
+      {
+        "text": "Реєстрація",
+        "svgAria": "іконка реєстрації",
+        "svg": "signup"
+      },
+      {
+        "text": "Увійти",
+        "svgAria": "іконка логіну",
+        "svg": "login"
+      }
     ]
   },
   "header": {},
   "footer": {
-    "disclaimer": "Сайт зроблений для персонального використання",
+    "disclaimer": "Сайт розроблений для персонального використання",
     "credits": {
       "text": "Автор:",
       "links": [

@@ -1,50 +1,44 @@
+'use client';
+
 import classNames from 'classnames';
 
 import getIconByName from '@/utils/getIconByName';
 
 import { IconBtnProps } from './IconBtn.props';
 
-const IconBtn: React.FC<IconBtnProps> = ({ item, className }) => {
+const IconBtn: React.FC<IconBtnProps> = ({
+  item,
+  className,
+  actionHandler,
+}) => {
   const { iconRef: Icon } = getIconByName(item.svg);
 
   const btnStyles = classNames('flex justify-center items-center', className);
 
-  const iconStyles = classNames('');
-
   return (
     <>
-      <a
-        key={item.link}
-        href={item.link}
-        aria-label={item.linkAria}
-        target="_blank"
-        rel="noopener noreferrer nofollow"
-        className={btnStyles}
-      >
-        <Icon className={iconStyles} aria-label={item.svgAria} />
-      </a>
-
-      {/* {url ? (
+      {item.link ? (
         <a
-          href={url}
-          onClick={onClick}
-          rel="noopener noreferrer nofollow"
+          key={item.link}
+          href={item.link}
+          aria-label={item.linkAria}
           target="_blank"
-          className={`${btnStyles} ${className && className}`}
-          aria-label={iconFunction}
+          rel="noopener noreferrer nofollow"
+          className={btnStyles}
         >
-          <Icon className={iconStyles} aria-label={iconLabel} />
+          <Icon aria-label={item.svgAria} />
         </a>
       ) : (
         <button
           type="button"
-          onClick={onClick}
+          onClick={actionHandler}
           className={btnStyles}
-          aria-label={iconFunction}
+          aria-label={item.text}
+          title={item.text}
         >
-          <Icon className={iconStyles} aria-label={iconLabel} />
+          <Icon aria-label={item.svgAria} />
         </button>
-      )} */}
+      )}
     </>
   );
 };

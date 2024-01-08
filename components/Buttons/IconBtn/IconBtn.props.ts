@@ -1,8 +1,7 @@
-import { FooterIconBtnItemType } from '@/types';
+import { IconBtnItemType } from '@/types';
 
 export interface IconBtnProps {
-  item: FooterIconBtnItemType;
-  // onClick?: () => void;
-  // url?: string | undefined;
+  item: IconBtnItemType;
+  actionHandler?: () => void;
   className?: string | undefined;
 }

@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.openModal {
+  overflow: hidden;
+  -webkit-overflow-scrolling: none;
+  touch-action: none;
+}
+
+.modal-backdrop {
+  background: hsla(0, 0%, 58%, 0.25);
+  backdrop-filter: blur(12.5px);
+}

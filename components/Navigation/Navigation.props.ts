@@ -1,3 +1,4 @@
 export type NavigationProps = {
-  placement: 'header' | 'footer';
+  placement: 'header' | 'footer' | 'menu';
+  actionHandler?: () => void;
 };
