@@ -1,48 +1,183 @@
+# FiCTiON bookcrossing website
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with
 [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Technologies used:
+
+- Next.js (app router)
+- TypeScript
+- Tailwind CSS
 
 ## Getting Started
 
-First, run the development server:
+1. Clone repo
+2. Recommended for use **npm** - `npm i` or `npm install`
+3. Create file `.env` in the project root using `.env.local.example` as a
+   template.
+4. Run the local server via `npm run dev` command.
+5. Access the website at `http://localhost:3000`.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### Pre-commit actions
+
+1. Run `npm run format` so that prettier could check and adjust your formatting.
+2. Run `npm run test-all` if you'd like to perform a full code test. This
+   command will also be executed automatically before commiting your changes to
+   GH.
+3. Fix the errors and if there are none - you can go ahead with commiting your
+   changes to your branch.
+4. Make sure to give your commit a name that clearly states what has been done:
+   **add/update/fix/remove** + **feature/component name**. Example: _"update
+   Header types & styles"_.
+
+## Project structure
+
+> Attention! The project structure is not final and can be changed at any time.
+
+**☝️ Create a components folder for each module**
+
+<details>
+
+<summary><b>💡 Example:</b></summary>
+
+<br/>
+
+```
+# ✅ Good
+
+├── components
+    ├── Header
+        ├── Header.tsx
+    ├── Footer
+        ├── Footer.tsx
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the
-result.
+</details>
 
-You can start editing the page by modifying `app/page.tsx`. The page
-auto-updates as you edit the file.
+---
 
-This project uses
-[`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to
-automatically optimize and load Inter, a custom Google Font.
+**☝️ Use the default export for the component**
 
-## Learn More
+<details>
 
-To learn more about Next.js, take a look at the following resources:
+<summary><b>💡 Example:</b></summary>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js
-  features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<br/>
 
-You can check out
-[the Next.js GitHub repository](https://github.com/vercel/next.js/) - your
-feedback and contributions are welcome!
+```ts
+# ✅ Good
 
-## Deploy on Vercel
+const Header = () => { ... }
 
-The easiest way to deploy your Next.js app is to use the
-[Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
-from the creators of Next.js.
+export default Header;
+```
 
-Check out our
-[Next.js deployment documentation](https://nextjs.org/docs/deployment) for more
-details.
+</details>
+
+---
+
+**☝️ Perform a re-export of your component from the `index.ts` file in the
+`components` folder**
+
+<details>
+
+<summary><b>💡 Example:</b></summary>
+
+<br/>
+
+```ts
+# ✅ Good
+
+// @/components/index.ts
+
+export { default as Header } from '@/components/Header/Header';
+```
+
+</details>
+
+---
+
+**☝️ Add `Section` to the section name when performing a re-export**
+
+<details>
+
+<summary><b>💡 Example:</b></summary>
+
+<br/>
+
+```ts
+# ✅ Good
+
+// @/sections/About/About.tsx
+
+const About = () => { ... }
+
+export default About;
+
+// @/sections/index.ts
+
+export { default as AboutSection } from '@/sections/About/About';
+```
+
+</details>
+
+---
+
+**☝️ Reusable css classes should be placed in the `styles` folder .**
+
+<details>
+
+<summary><b>💡 Example:</b></summary>
+
+<br/>
+
+```css
+/*globals.css */
+
+@layer components {
+  .your-class {
+    @apply ...;
+  }
+}
+```
+
+</details>
+
+---
+
+**☝️ Description of object structure**
+
+<details>
+
+<summary><b>💡 Structure: </b></summary>
+
+<br/>
+
+```
+|-- components -> folder with reusable components
+  |-- NameComponent -> folders for each component
+    |-- NameComponent.tsx -> main component
+    |-- NameComponent.props.ts -> prop types for this component
+    |-- NameComponent.module.css -> additional styles for the component (only if necessary)
+  |-- index.ts -> file for re-exports
+|-- app
+   -> layout, pages and routing
+|-- public -> static files
+  |-- icons -> folder with icons
+  |-- images -> folder with images
+|-- styles -> global styles
+|-- sections -> folder with section components
+  |-- SectionComponent -> folders for each section component
+    |-- SectionComponent.tsx -> main section component
+    |-- SectionComponent.props.ts -> prop types for this section component
+    |-- SectionComponent.module.css -> additional styles for the component (only if necessary)
+  |-- index.ts -> file for re-exports
+|-- types -> global types
+|-- data -> data for the project (website content )
+|-- hooks -> custom users hooks (can be created if necessary)
+|-- utils -> helpers, functions, etc.
+|-- api -> data fetching requests
+```
+
+</details>
+
+---
