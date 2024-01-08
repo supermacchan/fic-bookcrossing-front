@@ -1,0 +1,29 @@
+{
+  "header": {},
+  "footer": {
+    "disclaimer": "Сайт зроблений для персонального використання",
+    "credits": {
+      "text": "Автор:",
+      "links": [
+        {
+          "link": "https://www.linkedin.com/in/olga-birkovska/",
+          "linkAria": "посилання на лінкедин",
+          "svgAria": "іконка лінкедину",
+          "svg": "linkedin"
+        },
+        {
+          "link": "https://github.com/supermacchan",
+          "linkAria": "посилання на гітхаб",
+          "svgAria": "іконка гітхабу",
+          "svg": "github"
+        },
+        {
+          "link": "https://t.me/super_macchan",
+          "linkAria": "посилання на телергам",
+          "svgAria": "іконка телергаму",
+          "svg": "telegram"
+        }
+      ]
+    }
+  }
+}
