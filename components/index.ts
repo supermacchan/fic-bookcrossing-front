@@ -9,3 +9,6 @@ export { default as AuthMenu } from '@/components/AuthMenu/AuthMenu';
 // === buttons ===
 export { default as IconBtn } from '@/components/Buttons/IconBtn/IconBtn';
 export { default as MobMenuButton } from '@/components/Buttons/MobMenuButton/MobMenuButton';
+
+// === TEMP ===
+export { default as Placeholder } from '@/components/Placeholder/Placeholder';

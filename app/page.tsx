@@ -1,15 +1,12 @@
-import Image from 'next/image';
+import { Hero } from '@/sections';
+// import { Placeholder } from '@/components';
 
 export default function Home() {
   return (
-    <main className="flex justify-center pt-10">
-      <Image
-        src="/images/soon.png"
-        alt="Coming soon"
-        width={500}
-        height={300}
-        loading="lazy"
-      />
+    <main>
+      {/* <Placeholder /> */}
+
+      <Hero />
     </main>
   );
 }
