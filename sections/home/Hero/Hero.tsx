@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
         </div>
 
         {/* text block */}
-        <div className="flex flex-col gap-4 py-5 text-sm xl:w-1/2 xl:gap-3">
+        <div className="flex flex-col gap-4 py-5 text-sm md:text-base xl:w-1/2 xl:gap-3">
           <h1 className="-mx-3 text-center text-base font-semibold text-primary md:mx-0 md:text-lg xl:text-left">
             {hero.title}
           </h1>
