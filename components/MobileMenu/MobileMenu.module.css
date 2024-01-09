@@ -1,0 +1,6 @@
+.bg {
+  background-image: url('/icons/curve.svg');
+  background-repeat: no-repeat;
+  background-position: left -40px top 0;
+  background-size: 80%;
+}

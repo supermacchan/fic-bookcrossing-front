@@ -2,8 +2,11 @@
 
 import { useState, useEffect } from 'react';
 import { animated, useTransition } from '@react-spring/web';
+import classNames from 'classnames';
 
 import { MobMenuButton, AuthMenu, Navigation } from '@/components';
+
+import css from './MobileMenu.module.css';
 
 const MobileMenu: React.FC = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -43,6 +46,11 @@ const MobileMenu: React.FC = () => {
     handleMenuToggle();
   };
 
+  const mobMenuStyles = classNames(
+    'absolute right-0 top-0 w-full bg-white px-6 pb-9 pt-5 text-center',
+    css.bg,
+  );
+
   return (
     <>
       <MobMenuButton onClick={handleMenuToggle} />
@@ -55,7 +63,7 @@ const MobileMenu: React.FC = () => {
               onClick={handleOverlayClick}
               style={style}
             >
-              <div className="absolute right-0 top-0 w-full bg-white px-6 pb-9 pt-5 text-center">
+              <div className={mobMenuStyles}>
                 <MobMenuButton onClick={handleMenuToggle} isMenu={true} />
 
                 <Navigation placement="menu" actionHandler={handleMenuToggle} />

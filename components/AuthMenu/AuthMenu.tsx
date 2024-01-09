@@ -33,7 +33,7 @@ const AuthMenu: React.FC<AuthMenuProps> = ({ placement, actionHandler }) => {
     'stroke-primary duration-200 ease-in hover:stroke-accent focus:stroke-accent',
     {
       'h-[46px] w-[46px] rounded-xl bg-coldBg p-2': placement === 'menu',
-      'h-[32px] w-[32px]': placement === 'header',
+      'h-[24px] w-[24px] xl:h-[32px] xl:w-[32px]': placement === 'header',
     },
   );
 
