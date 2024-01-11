@@ -5,6 +5,7 @@ export { default as Logo } from '@/components/Logo/Logo';
 export { default as Navigation } from '@/components/Navigation/Navigation';
 export { default as MobileMenu } from '@/components/MobileMenu/MobileMenu';
 export { default as AuthMenu } from '@/components/AuthMenu/AuthMenu';
+export { default as AuthBlock } from '@/components/AuthBlock/AuthBlock';
 
 // === buttons ===
 export { default as IconBtn } from '@/components/Buttons/IconBtn/IconBtn';

@@ -1,4 +1,4 @@
-import { Hero } from '@/sections';
+import { Hero, Rules } from '@/sections';
 // import { Placeholder } from '@/components';
 
 export default function Home() {
@@ -7,6 +7,7 @@ export default function Home() {
       {/* <Placeholder /> */}
 
       <Hero />
+      <Rules />
     </main>
   );
 }

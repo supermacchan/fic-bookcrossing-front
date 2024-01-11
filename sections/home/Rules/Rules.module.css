@@ -1,0 +1,40 @@
+.card {
+  position: relative;
+
+  @media screen and (min-width: 1280px) {
+    background-image: url('/icons/rules-lines.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left -300px top;
+
+    @media screen and (min-width: 1600px) {
+      background-position: left -180px top;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .card::after {
+    content: '';
+
+    width: 120px;
+    height: 100px;
+
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+
+    background-image: url('/icons/rules.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .card::after {
+    width: 180px;
+    height: 120px;
+
+    right: 20px;
+  }
+}
