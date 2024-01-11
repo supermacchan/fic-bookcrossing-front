@@ -1,20 +1,27 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import classNames from 'classnames';
 
 import Available from '@/public/icons/tick.svg';
 import Unavailable from '@/public/icons/cross.svg';
 
+import { bookCard } from '@/data/common.json';
+
 import { BookCardProps } from './BookCard.props';
 import css from './BookCard.module.css';
 
 const BookCard: React.FC<BookCardProps> = ({ book }) => {
+  const { statusAria, loadMoreBtn } = bookCard;
+
   const cardStyles = classNames(
-    'relative w-[300px] h-[500px] rounded-xl hover:scale-[1.03] duration-300 ease-in',
+    // 'hover:scale-[1.03]',
+    'relative mx-auto w-[280px] h-[500px] md:w-[300px] rounded-xl duration-300 ease-in overflow-hidden',
     css.card,
   );
 
   const textStyles = classNames(
-    'absolute bottom-0 left-0 z-10 bg-white-dark text-primary w-full p-4 h-0 invisible opacity-0 rounded-b-xl duration-300 ease-in',
+    'invisible opacity-0 h-0',
+    'absolute bottom-0 left-0 z-10 bg-white-dark text-primary flex flex-col w-full p-4 rounded-b-xl duration-300 ease-in',
     css.text,
   );
 
@@ -52,16 +59,27 @@ const BookCard: React.FC<BookCardProps> = ({ book }) => {
             </li>
           ))}
         </ul>
+
+        <Link
+          href={`/book/${book.id}`}
+          className="mt-auto block rounded-lg bg-coldBg p-3 text-center font-medium duration-200 ease-in hover:bg-secondary hover:text-white focus:bg-secondary focus:text-white"
+        >
+          {loadMoreBtn}
+        </Link>
       </div>
 
       <div
         className={statusStyles}
-        title={book.available ? 'книга доступна' : 'книга недоступна'}
+        title={book.available ? statusAria.available : statusAria.unavailable}
       >
         {book.available ? (
-          <Available width={20} height={20} aria-label="книга доступна" />
+          <Available width={20} height={20} aria-label={statusAria.available} />
         ) : (
-          <Unavailable width={20} height={20} aria-label="книга недоступна" />
+          <Unavailable
+            width={20}
+            height={20}
+            aria-label={statusAria.unavailable}
+          />
         )}
       </div>
     </div>

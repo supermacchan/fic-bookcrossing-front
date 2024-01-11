@@ -1,7 +1,8 @@
-.card:hover .text {
+.card:hover .text,
+.card:focus .text {
   opacity: 1;
   visibility: visible;
-  height: 220px;
+  height: 50%;
 }
 
 .card::after {
@@ -22,6 +23,11 @@
   transition: all 300ms ease-in;
 }
 
-.card:hover::after {
+.card:hover::after,
+.card:focus::after {
   opacity: 1;
+}
+
+.card {
+  box-shadow: 2px 0px 9px 0px rgba(166, 141, 174, 0.28);
 }

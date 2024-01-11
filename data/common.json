@@ -82,5 +82,12 @@
       "signup": "Зареєструватися",
       "login": "Увійти"
     }
+  },
+  "bookCard": {
+    "statusAria": {
+      "available": "книга доступна",
+      "unavailable": "книга недоступна"
+    },
+    "loadMoreBtn": "Дізнатись більше"
   }
 }
