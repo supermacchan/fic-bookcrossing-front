@@ -1,0 +1,27 @@
+.card:hover .text {
+  opacity: 1;
+  visibility: visible;
+  height: 220px;
+}
+
+.card::after {
+  content: '';
+
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background-color: hsla(252, 17%, 83%, 0.7);
+  border-radius: 12px;
+
+  opacity: 0;
+
+  transition: all 300ms ease-in;
+}
+
+.card:hover::after {
+  opacity: 1;
+}

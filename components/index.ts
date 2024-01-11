@@ -13,3 +13,6 @@ export { default as MobMenuButton } from '@/components/Buttons/MobMenuButton/Mob
 
 // === TEMP ===
 export { default as Placeholder } from '@/components/Placeholder/Placeholder';
+
+// === general ===
+export { default as BookCard } from '@/components/BookCard/BookCard';

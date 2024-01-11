@@ -8,3 +8,13 @@ export type IconBtnItemType = {
   svg: IconBtnNameType;
   text?: string;
 };
+
+// books
+export type CardBookInfoType = {
+  id: string;
+  image: string;
+  title: string;
+  author: string;
+  genres: string[];
+  available: boolean;
+};

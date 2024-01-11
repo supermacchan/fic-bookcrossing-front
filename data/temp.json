@@ -1,0 +1,84 @@
+{
+  "newBooks": [
+    {
+      "id": "01",
+      "image": "https://img001.prntscr.com/file/img001/-K-_7fg2TaOhIDIj7QSkxQ.png",
+      "title": "Тисяча сяйливих сонць",
+      "author": "Халед Госсейні",
+      "genres": ["роман"],
+      "available": true
+    },
+    {
+      "id": "02",
+      "image": "https://img001.prntscr.com/file/img001/yZm54YG8QMedwmkQPrZU0w.png",
+      "title": "Скляний замок",
+      "author": "Джаннетт Воллс",
+      "genres": ["мемуари"],
+      "available": true
+    },
+    {
+      "id": "03",
+      "image": "https://img001.prntscr.com/file/img001/6d_qk1PoRp29CMnPY8ZseA.png",
+      "title": "Друзі, коханки і велика халепа",
+      "author": "Меттью Перрі",
+      "genres": ["мемуари"],
+      "available": false
+    },
+    {
+      "id": "04",
+      "image": "https://img001.prntscr.com/file/img001/2QuOHd3KQKiX4OeyqEtTqQ.png",
+      "title": "Драбина",
+      "author": "Євгенія Кузнєцова",
+      "genres": ["сучасна проза", "роман"],
+      "available": true
+    },
+    {
+      "id": "05",
+      "image": "https://img001.prntscr.com/file/img001/iMq5yNo3TC6rEnlocAyypQ.png",
+      "title": "Маленьке життя",
+      "author": "Ганья Янаґігара",
+      "genres": ["роман", "ЛГБТ"],
+      "available": false
+    },
+    {
+      "id": "06",
+      "image": "https://img001.prntscr.com/file/img001/s3qLHibDSBik4Z7BWl1XIQ.png",
+      "title": "Куджо",
+      "author": "Стівен Кінг",
+      "genres": ["жахи", "роман"],
+      "available": false
+    },
+    {
+      "id": "07",
+      "image": "https://img001.prntscr.com/file/img001/3ka_9VBUSH6Ecjqh6qEigA.png",
+      "title": "Бог завжди подорожує інкогніто",
+      "author": "Лоран Гунель",
+      "genres": ["психологічний роман"],
+      "available": true
+    },
+    {
+      "id": "08",
+      "image": "https://img001.prntscr.com/file/img001/cUFakA1uSPqJ6aI14KcLKg.png",
+      "title": "Кафе на краю світу",
+      "author": "Джон П. Стрелекі",
+      "genres": ["саморозвиток", "книга-мотиватор"],
+      "available": false
+    },
+    {
+      "id": "09",
+      "image": "https://img001.prntscr.com/file/img001/ES8cAj-nQ2y0o-uEph9pKg.png",
+      "title": "Дивовижна історія Аґнес Сесилії",
+      "author": "Марія Гріпе",
+      "genres": ["підліткова література"],
+      "available": true
+    },
+    {
+      "id": "10",
+      "image": "https://img001.prntscr.com/file/img001/iEy8gBXcRTOgGBPQJ9s44w.png",
+      "title": "Навіяні. Міжсезоння",
+      "author": "Любов Деркач",
+      "genres": ["міське фентезі", "містика", "українська міфологія"],
+      "available": true
+    }
+  ]
+}

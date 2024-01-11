@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
             alt="Coming soon"
             width={500}
             height={300}
-            loading="lazy"
+            priority
             className="w-full"
           />
         </div>
