@@ -56,16 +56,12 @@ const Highlights: React.FC = () => {
         <section className="pb-10">
           <div className="container">
             <h2 className="mb-5 text-2xl font-semibold uppercase">{title}</h2>
-            {/* <ul className="flex flex-wrap justify-center gap-5"> */}
             <Slider {...slderOptions}>
               {newBooks.map(book => (
-                // <li key={book.id}>
                 <BookCard key={book.id} book={book} />
-                // </li>
               ))}
             </Slider>
 
-            {/* </ul> */}
             <Link
               href="/catalog"
               className="mx-auto mt-5 block w-[250px] rounded-lg bg-accent px-4 py-3 text-center text-lg font-medium text-white duration-300 ease-in hover:bg-primary focus:bg-primary"

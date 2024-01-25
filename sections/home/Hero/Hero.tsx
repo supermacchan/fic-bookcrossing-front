@@ -5,6 +5,9 @@ import { AuthBlock } from '@/components';
 import { hero } from '@/data/homepage.json';
 
 const Hero: React.FC = () => {
+  // TEMP
+  const auth = false;
+
   return (
     <section>
       <div className="container xl:flex xl:gap-7">
@@ -28,8 +31,7 @@ const Hero: React.FC = () => {
           <p className="mb-3">{hero.description}</p>
           <p className="mb-6 xl:mb-8 xxl:mb-12">{hero.target}</p>
 
-          {/* if !auth */}
-          <AuthBlock auth={false} />
+          {!auth ? <AuthBlock /> : <p>{hero.authorized}</p>}
         </div>
       </div>
     </section>
