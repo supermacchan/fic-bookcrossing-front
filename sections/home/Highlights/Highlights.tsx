@@ -24,36 +24,29 @@ const Highlights: React.FC = () => {
     autoplay: true,
     autoplaySpeed: 3000,
     centerMode: true,
-    // responsive: [
-    // {
-    //   breakpoint: 768,
-    //   settings: {
-    //     slidesToShow: 2,
-    //     variableWidth: true
-    //   },
-    // },
-    // {
-    //   breakpoint: 1280,
-    //   settings: {
-    //     slidesToShow: 3,
-    //     centerMode: true,
-    //     variableWidth: true
-    //   },
-    // },
-    // {
-    //   breakpoint: 1600,
-    //   settings: {
-    //     slidesToShow: 4,
-    //     centerMode: true,
-    //   },
-    // },
-    // {
-    //   breakpoint: 1599.98,
-    //   settings: {
-    //     slidesToShow: 4.3,
-    //   },
-    // },
-    // ],
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+          centerMode: false,
+        },
+      },
+      {
+        breakpoint: 1279,
+        settings: {
+          slidesToShow: 2,
+          centerMode: false,
+        },
+      },
+      {
+        breakpoint: 1599,
+        settings: {
+          slidesToShow: 3,
+          centerMode: false,
+        },
+      },
+    ],
   };
 
   return (
