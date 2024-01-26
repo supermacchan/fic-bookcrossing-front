@@ -7,6 +7,7 @@ export type IconBtnItemType = {
   svgAria: string;
   svg: IconBtnNameType;
   text?: string;
+  navLink?: string;
 };
 
 // books
@@ -17,4 +18,16 @@ export type CardBookInfoType = {
   author: string;
   genres: string[];
   available: boolean;
+};
+
+// form
+export type InputType = {
+  name: string;
+  label: string | null;
+  placeholder: string;
+  type: string;
+  dataField: string;
+  required: boolean;
+  autocomplete: string;
+  warning?: string;
 };

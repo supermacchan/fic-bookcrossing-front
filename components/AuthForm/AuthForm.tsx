@@ -1,61 +1,58 @@
 'use client';
 
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+
+import { AuthInput } from '@/components';
 
 import { authForm } from '@/data/common.json';
 
-const AuthForm = () => {
+const AuthForm: React.FC = () => {
   const path = usePathname();
   const { signup, login } = authForm;
-  console.log(signup.inputs);
+  let data;
+
+  if (path === '/signup') {
+    data = signup;
+  } else {
+    data = login;
+  }
+
+  const handleSubmit = (e: React.FormEvent): void => {
+    e.preventDefault();
+  };
 
   return (
     <>
-      <h2 className="mb-3 text-center text-base font-semibold uppercase text-primary">
-        {path === '/signup' ? signup.title : login.title}
-      </h2>
+      <div className="mx-auto max-w-[400px] rounded-3xl bg-white p-5 md:max-w-[500px] md:px-8 md:py-6 xxl:max-w-[600px] xxl:px-10">
+        <form onSubmit={handleSubmit}>
+          <ul className="flex flex-col gap-3 xl:gap-5 xxl:gap-6">
+            {data.inputs.map(input => (
+              <li
+                key={input.name}
+                className="flex flex-col gap-3 xl:gap-5 xxl:gap-6"
+              >
+                <AuthInput input={input} />
+              </li>
+            ))}
+          </ul>
+          <button
+            type="submit"
+            className="mt-4 block w-full rounded-lg bg-accent py-3 text-center text-base font-medium text-white duration-300 ease-in hover:bg-primary focus:bg-primary md:mx-auto xl:mt-5 xl:py-4 xxl:mt-6 xxl:text-xl"
+          >
+            {data.button}
+          </button>
+        </form>
+      </div>
 
-      <div className="mx-auto max-w-[400px] rounded-3xl bg-white p-5">
-        {path === '/signup' ? (
-          // registration form
-          <form>
-            <ul className="flex flex-col gap-3">
-              {signup.inputs.map(input => (
-                <li key={input.name} className="flex flex-col gap-3">
-                  {input.label && (
-                    <label htmlFor={input.name}>{input.label}</label>
-                  )}
-                  <input
-                    name={input.name}
-                    id={input.name}
-                    type={input.type}
-                    placeholder={input.placeholder}
-                    autoComplete={input.autocomplete}
-                    required={input.required}
-                  />
-                </li>
-              ))}
-            </ul>
-          </form>
-        ) : (
-          // login form
-          <form>
-            <ul className="flex flex-col gap-3">
-              {login.inputs.map(input => (
-                <li key={input.name} className="flex flex-col gap-3">
-                  <input
-                    name={input.name}
-                    id={input.name}
-                    type={input.type}
-                    placeholder={input.placeholder}
-                    autoComplete={input.autocomplete}
-                    required={input.required}
-                  />
-                </li>
-              ))}
-            </ul>
-          </form>
-        )}
+      <div className="mt-3 flex justify-center gap-2 text-xs md:text-sm xl:mt-5 xxl:text-base">
+        <p>{data.alternative.text}</p>
+        <Link
+          href={data.alternative.link}
+          className="underline transition-all duration-200 ease-in hover:text-accent hover:no-underline focus:text-accent focus:no-underline"
+        >
+          {data.alternative.linkText}
+        </Link>
       </div>
     </>
   );

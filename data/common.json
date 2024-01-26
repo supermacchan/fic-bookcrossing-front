@@ -31,7 +31,7 @@
   "authNav": {
     "authorized": [
       {
-        "text": "Вийти",
+        "text": "Вийти з акаунту",
         "svgAria": "іконка виходу з акаунту",
         "svg": "logout"
       }
@@ -40,12 +40,14 @@
       {
         "text": "Реєстрація",
         "svgAria": "іконка реєстрації",
-        "svg": "signup"
+        "svg": "signup",
+        "navLink": "/signup"
       },
       {
         "text": "Увійти",
         "svgAria": "іконка логіну",
-        "svg": "login"
+        "svg": "login",
+        "navLink": "/login"
       }
     ]
   },
@@ -78,17 +80,24 @@
   },
   "authBlock": {
     "text": "* Щоб мати повний доступ до функціоналу сайту, тобі потрібно зареєструватися або увійти до свого акаунту, якщо ти вже зареєстрований(-на).",
-    "buttons": {
-      "signup": "Зареєструватися",
-      "login": "Увійти"
-    }
+    "buttons": [
+      {
+        "text": "Зареєструватися",
+        "navLink": "/signup"
+      },
+      {
+        "text": "Увійти",
+        "navLink": "/login"
+      }
+    ]
   },
   "authForm": {
     "signup": {
-      "title": "Заповни форму реєстрації нового користувача",
+      "title": "Створити нового користувача",
       "inputs": [
         {
           "name": "name",
+          "label": null,
           "placeholder": "Введіть своє ім'я",
           "type": "text",
           "dataField": "name",
@@ -97,6 +106,7 @@
         },
         {
           "name": "email",
+          "label": null,
           "placeholder": "Введіть електронну пошту*",
           "type": "email",
           "dataField": "email",
@@ -105,6 +115,7 @@
         },
         {
           "name": "password",
+          "label": null,
           "placeholder": "Введіть пароль*",
           "type": "password",
           "dataField": "password",
@@ -113,6 +124,7 @@
         },
         {
           "name": "confirm-password",
+          "label": null,
           "placeholder": "Підтвердіть пароль*",
           "type": "password",
           "dataField": "password",
@@ -121,20 +133,28 @@
         },
         {
           "name": "secret",
-          "label": "Увага, контрольне питання! Який шрифт використовується для офіційного логотипу FiCTiON?",
+          "warning": "Увага, контрольне питання!",
+          "label": "Який шрифт використовується для офіційного логотипу FiCTiON?",
           "placeholder": "Введіть відповідь*",
           "type": "text",
           "dataField": "secret",
           "required": true,
           "autocomplete": ""
         }
-      ]
+      ],
+      "button": "Зареєструватися",
+      "alternative": {
+        "text": "Вже зареєстровані?",
+        "link": "/login",
+        "linkText": "Увійти до профілю."
+      }
     },
     "login": {
-      "title": "Заповни форму входу в особистий профіль",
+      "title": "Увійти в особистий профіль",
       "inputs": [
         {
           "name": "email",
+          "label": null,
           "placeholder": "Введіть електронну пошту",
           "type": "email",
           "dataField": "email",
@@ -143,13 +163,20 @@
         },
         {
           "name": "password",
+          "label": null,
           "placeholder": "Введіть пароль",
           "type": "password",
           "dataField": "password",
           "required": true,
           "autocomplete": "password"
         }
-      ]
+      ],
+      "button": "Увійти",
+      "alternative": {
+        "text": "Ще не зареєстровані?",
+        "link": "/signup",
+        "linkText": "Створити акаунт."
+      }
     }
   },
   "bookCard": {

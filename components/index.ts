@@ -19,3 +19,4 @@ export { default as BookCard } from '@/components/BookCard/BookCard';
 
 // === auth form ===
 export { default as AuthForm } from '@/components/AuthForm/AuthForm';
+export { default as AuthInput } from '@/components/AuthInput/AuthInput';

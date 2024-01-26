@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import classNames from 'classnames';
 
 import getIconByName from '@/utils/getIconByName';
@@ -17,9 +18,9 @@ const IconBtn: React.FC<IconBtnProps> = ({
 
   return (
     <>
-      {item.link ? (
+      {/* external link */}
+      {item.link && (
         <a
-          key={item.link}
           href={item.link}
           aria-label={item.linkAria}
           target="_blank"
@@ -28,7 +29,10 @@ const IconBtn: React.FC<IconBtnProps> = ({
         >
           <Icon aria-label={item.svgAria} />
         </a>
-      ) : (
+      )}
+
+      {/* icon button */}
+      {!item.link && !item.navLink && (
         <button
           type="button"
           onClick={actionHandler}
@@ -38,6 +42,18 @@ const IconBtn: React.FC<IconBtnProps> = ({
         >
           <Icon aria-label={item.svgAria} />
         </button>
+      )}
+
+      {/* nav link */}
+      {item.navLink && (
+        <Link
+          href={item.navLink}
+          aria-label={item.linkAria}
+          className={btnStyles}
+          onClick={actionHandler}
+        >
+          <Icon aria-label={item.svgAria} />
+        </Link>
       )}
     </>
   );
