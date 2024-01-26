@@ -83,6 +83,75 @@
       "login": "Увійти"
     }
   },
+  "authForm": {
+    "signup": {
+      "title": "Заповни форму реєстрації нового користувача",
+      "inputs": [
+        {
+          "name": "name",
+          "placeholder": "Введіть своє ім'я",
+          "type": "text",
+          "dataField": "name",
+          "required": false,
+          "autocomplete": "name"
+        },
+        {
+          "name": "email",
+          "placeholder": "Введіть електронну пошту*",
+          "type": "email",
+          "dataField": "email",
+          "required": true,
+          "autocomplete": "email"
+        },
+        {
+          "name": "password",
+          "placeholder": "Введіть пароль*",
+          "type": "password",
+          "dataField": "password",
+          "required": true,
+          "autocomplete": "password"
+        },
+        {
+          "name": "confirm-password",
+          "placeholder": "Підтвердіть пароль*",
+          "type": "password",
+          "dataField": "password",
+          "required": true,
+          "autocomplete": ""
+        },
+        {
+          "name": "secret",
+          "label": "Увага, контрольне питання! Який шрифт використовується для офіційного логотипу FiCTiON?",
+          "placeholder": "Введіть відповідь*",
+          "type": "text",
+          "dataField": "secret",
+          "required": true,
+          "autocomplete": ""
+        }
+      ]
+    },
+    "login": {
+      "title": "Заповни форму входу в особистий профіль",
+      "inputs": [
+        {
+          "name": "email",
+          "placeholder": "Введіть електронну пошту",
+          "type": "email",
+          "dataField": "email",
+          "required": true,
+          "autocomplete": "email"
+        },
+        {
+          "name": "password",
+          "placeholder": "Введіть пароль",
+          "type": "password",
+          "dataField": "password",
+          "required": true,
+          "autocomplete": "password"
+        }
+      ]
+    }
+  },
   "bookCard": {
     "statusAria": {
       "available": "книга доступна",

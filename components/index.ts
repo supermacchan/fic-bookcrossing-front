@@ -16,3 +16,6 @@ export { default as Placeholder } from '@/components/Placeholder/Placeholder';
 
 // === general ===
 export { default as BookCard } from '@/components/BookCard/BookCard';
+
+// === auth form ===
+export { default as AuthForm } from '@/components/AuthForm/AuthForm';
